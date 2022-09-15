@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+  <title>Simple Tailwind Starter</title>
+</head>
+
+<body class="relative ">
+  <!-- Backdrop -->
+  <div class="absolute top-0 left-0 z-40 bg-black opacity-50 h-full w-full hidden" id="backdrop"></div>
+
+  <nav class="sticky top-0 z-50 bg-promactDarkBlue" id="navbar">
+    <div class="container max-w-6xl mx-auto flex items-center justify-between py-6 px-3 lg:py-0 lg:px-0">
+      <!-- Logo -->
+      <img id="logo" src="images/Logo-White.png" alt="logo" />
+      <!-- Menu -->
+      <div class="hidden items-center text-white space-x-10 font-semibold lg:flex" id="navbar-links">
+        <span class="uppercase hover:text-promactYellow cursor-pointer py-6 px-3 nav-link" id="desktop-nav-services"
+          data-target="desktop-services">Services</span>
+        <span class="uppercase hover:text-promactYellow cursor-pointer py-6 px-3 nav-link" id="desktop-nav-products"
+          data-target="desktop-products">Products</span>
+        <span class="uppercase hover:text-promactYellow cursor-pointer py-6 px-3 nav-link" id="desktop-nav-company"
+          data-target="desktop-company">Company</span>
+        <button class="bg-promactYellow uppercase text-gray-700 px-3 py-1 rounded-full font-bold">Get in touch</button>
+      </div>
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="z-30 block focus:outline-none hamburger lg:hidden">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </div>
+
+    <div id="menu"
+      class="absolute hidden flex-col top-0 right-0 p-4 divide-y space-y-5 min-w-max w-1/3 min-h-screen bg-white transition-all duration-100 z-10">
+      <a href="#" class="mt-16 uppercase hover:text-promactYellow">Home</a>
+      <a href="#" class="uppercase hover:text-promactYellow">Services</a>
+      <a href="#" class="uppercase hover:text-promactYellow">Products</a>
+      <a href="#" class="uppercase hover:text-promactYellow">Company</a>
+      <a class="bg-promactYellow uppercase text-gray-700 px-3 py-1 rounded-full inline">Get in
+        touch</a>
+    </div>
+  </nav>
+
+  <section id="nav-extention" class="bg-white fixed z-50 top-[72px] left-0 right-0">
+    <div class="bg-white container max-w-6xl mx-auto hidden nav-ext-panel desktop-services" id="">
+      <div class=" flex px-4 py-10">
+        <div>
+          <p class="text-xl font-semibold text-promactGray mb-2">
+            Committed To Perform At Any Situation.
+          </p>
+          <ul class="tick-style-2 pl-6  mt-4 text-promactGray leading-9">
+            <li>Understand your Vision</li>
+            <li>Work Transparency</li>
+            <li>Technical Support</li>
+            <li>18 year Experience</li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-3 grid-rows-2 gap-5 ml-10">
+          <div>
+            <h3 class="text-2xl leading-9 text-promactGray mb-2 hover:text-promactYellow">
+              Product Engineering
+            </h3>
+            <p class="text-base text-gray-500">Work with our world best product engineers.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl leading-9 text-promactGray mb-2 hover:text-promactYellow">
+              Mobile Development
+            </h3>
+            <p class="text-base text-gray-500">Delivering high performance and scalable mobile apps.</p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl leading-9 text-promactGray mb-2 hover:text-promactYellow">
+              Web Development
+            </h3>
+            <p class="text-base text-gray-500">Specialize in developing engaging web solutions.</p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl leading-9 text-promactGray mb-2 hover:text-promactYellow">
+              DevOps
+            </h3>
+            <p class="text-base text-gray-500">We have more than 11 years experience in DevOps.</p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl leading-9 text-promactGray mb-2 hover:text-promactYellow">
+              Blockchain Technology
+            </h3>
+            <p class="text-base text-gray-500">Pilot solutions customized to your business line.</p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl leading-9 text-promactGray mb-2 hover:text-promactYellow">
+              Artificial Intelligence
+            </h3>
+            <p class="text-base text-gray-500">Hire our experts and develop your Artificial Intelligence.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white container max-w-6xl mx-auto hidden nav-ext-panel desktop-products" id="">
+      <div class=" grid grid-cols-3 gap-5 px-4 py-10">
+        <div>
+          <p class="text-xl font-semibold text-promactGray mb-2">
+            We Think About Your Business.
+          </p>
+          <p class="text-base text-gray-500">A blend of a good idea, creativity, simplicity, robust technical
+            implementation and an exceptional team is nothing less than an innovation. We pride ourselves for that.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-promactGray mb-2 hover:text-promactLightBlue">Questy</h3>
+          <p class="text-base text-gray-500">Questy is a cloud-based online testing software for talent measurement.
+          </p>
+          <ul class="tick-style-2 pl-6 mt-4 text-promactGray leading-9">
+            <li>Test &amp; Compile Code</li>
+            <li>Code in Multiple Language</li>
+            <li>Test Case Based Compilation</li>
+            <li>Automated Code Assessment</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-promactGray mb-2 hover:text-promactLightBlue">Probot</h3>
+          <p class="text-base text-gray-500">Our Probot Ninja does all the iterative and boring activities for you in
+            the background!
+          </p>
+          <ul class="tick-style-2 pl-6 mt-4 text-promactGray leading-9">
+            <li>Handy</li>
+            <li>Centralized & Remote</li>
+            <li>Super Fast</li>
+            <li>Automated Code Assessment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white container max-w-6xl mx-auto hidden nav-ext-panel desktop-company" id="">
+      <div class=" flex px-4 py-10">
+        <div>
+          <p class="text-xl font-semibold text-promactGray mb-2">
+            Promact is an Excellence Driven Company.
+          </p>
+          <ul class="tick-style-2 pl-6  mt-4 text-promactGray leading-9">
+            <li>Experience</li>
+            <li>Team & Culture</li>
+            <li>Cost Effective</li>
+            <li>infrastructure</li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-3 grid-rows-2 gap-5 ml-10">
+          <div>
+            <h3 class="text-2xl leading-9 text-promactGray mb-2 hover:text-promactLightBlue">
+              About Us
+            </h3>
+            <p class="text-base text-gray-500">Promact is an excellence driven company.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl leading-9 text-promactGray mb-2 hover:text-promactLightBlue">
+              Careers@Promact
+            </h3>
+            <p class="text-base text-gray-500">We are a team of awesome 120+ people based in Vadodara, India.</p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl leading-9 text-promactGray mb-2 hover:text-promactLightBlue">
+              Life@Promact
+            </h3>
+            <p class="text-base text-gray-500">Apart from work, we know how to enjoy life..</p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl leading-9 text-promactGray mb-2 hover:text-promactLightBlue">
+              Internship
+            </h3>
+            <p class="text-base text-gray-500">Gain hands-on experience in live projects, spur innovations and unleash
+              your potential</p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl leading-9 text-promactGray mb-2 hover:text-promactLightBlue">
+              Promact Blog
+            </h3>
+            <p class="text-base text-gray-500">Subscribe to our mailing list and get interesting stuff and updates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hero" class="">
+    <div class="bg-promactDarkBlue flex items-center justify-center max-h-[660px]">
+      <!-- Image Slider -->
+      <div class="relative bg-promactDarkBlue w-[1366px] h-[660px]">
+        <div class="slide active">
+          <img src="images/banner-5.webp" alt="" class="mx-auto" />
+          <div class="absolute top-40 w-2/3 left-10 md:top-40 md:w-1/3 md:left-32">
+            <h2 class="text-white font-semibold mb-4 text-2xl md:text-4xl">
+              Certified AWS
+              <br /> <span class="text-promactYellow">Consulting</span>
+              Partner
+            </h2>
+            <p class="text-white text-xl">
+              As AWS Consulting Partner we offer specialized service to help customers of all sizes design, build
+              migrate
+              and manage thier workloads on AWS to accelarate their Cloud journey.
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/banner1.webp" alt="" class="mx-auto" />
+          <div class="absolute top-40 w-2/3 left-10 md:top-40 md:w-1/3 md:left-32">
+            <h2 class="text-white font-semibold mb-4 text-2xl md:text-4xl">
+              A Product
+              <span class="text-promactYellow">Engineering</span> <br />
+              Company
+            </h2>
+            <p class="text-white text-xl">
+              Promact creates product that let people do thing differently. What's your idea?
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/banner3.webp" alt="" class="mx-auto" />
+          <div class="absolute top-40 w-2/3 left-10 md:top-40 md:w-1/3 md:left-32">
+            <h2 class="text-white font-semibold mb-4 text-2xl md:text-4xl">
+              Artificial
+              <span class="text-promactYellow">Intelligence</span> <br />
+              Solutions
+            </h2>
+            <p class="text-white text-xl">
+              Promact creates product that let people do thing differently. What's your idea?
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/banner11.webp" alt="" class="mx-auto" />
+          <div class="absolute top-40 w-2/3 left-10 md:top-40 md:w-1/3 md:left-32">
+            <h2 class="text-white font-semibold mb-4 text-2xl md:text-4xl">
+              Develop
+              <span class="text-promactYellow">Outstanding</span> <br />
+              Products Fast.
+            </h2>
+            <p class="text-white text-xl">
+              Promact creates product that let people do thing differently. What's your idea?
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="images/banner5.webp" alt="" class="mx-auto" />
+          <div class="absolute top-40 w-2/3 left-10 md:top-40 md:w-1/3 md:left-32">
+            <h2 class="text-white font-semibold mb-4 text-2xl md:text-4xl">
+              Amazing things
+              <span class="text-promactYellow">happen</span> <br />
+              here everyday.
+            </h2>
+          </div>
+        </div>
+
+        <div class="z-20 absolute flex bottom-8 left-1/2 -translate-x-1/2">
+          <div class="bg-blue-800 w-3 h-3 m-3 rounded-full cursor-pointer slider-nav-btn active"></div>
+          <div class="bg-blue-800 w-3 h-3 m-3 rounded-full cursor-pointer slider-nav-btn"></div>
+          <div class="bg-blue-800 w-3 h-3 m-3 rounded-full cursor-pointer slider-nav-btn"></div>
+          <div class="bg-blue-800 w-3 h-3 m-3 rounded-full cursor-pointer slider-nav-btn"></div>
+          <div class="bg-blue-800 w-3 h-3 m-3 rounded-full cursor-pointer slider-nav-btn"></div>
+        </div>
+
+      </div>
+      <!-- Slider End -->
+    </div>
+
+  </section>
+
+  <!-- We are Promactians -->
+  <section id="promactians" class=" bg-promactYellow">
+    <div class="container mx-auto text-center p-10 md:p-16 md:pb-32">
+      <h2 class="font-semibold text-promactGray text-3xl mb-5 md:mt-14">
+        We Are Promactians!
+      </h2>
+      <p class="text-promactGray text-xl leading-9 md:mx-24">
+        Promact was founded in 2003 with a clear mission to create a culturally unique software company that not only
+        delivers the best product but is always ahead in learning to use the latest technology. Our passion for building
+        great products reflects in everything we do - methodology we employ, development process we follow and every
+        line of code we build. We believe in keeping things simple and maintaining transparency. At Promact, we advocate
+        client centric approach and take full ownership of each project. What sets us apart as an organization is our
+        dedication to quality by applying Agile approach and showing integrity with full accountability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="Services">
+    <div class="container mx-auto my-32">
+      <h2 class="font-semibold text-promactGray text-center text-3xl mb-10 md:mt-14">
+        Our Well Defined IT Services
+      </h2>
+      <div class="grid grid-cols-1 gap-10 mx-10 md:mx-16 md:grid-cols-2 lg:mx-40 lg:grid-cols-3 ">
+        <!-- Product Engineering -->
+        <div
+          class="relative flex flex-col items-center border-promactBorderLightGray bg-promactLightGray border-2 rounded-3xl  overflow-hidden">
+          <img src="images/Product-Engineering.webp" class="w-[74px] h-20 m-10 mb-5" />
+          <h3 class="font-semibold text-promactGray text-2xl mb-5">Product Engineering</h3>
+          <p class="text-promactGray text-xl mx-10 text-center mb-14">Turn your ideas from concept to reality with our
+            end-to-end product development services and consultation
+            in every phase</p>
+          <div class="absolute bottom-0 h-3 w-10/12 mx-auto bg-promactYellow rounded-t-xl"></div>
+        </div>
+
+        <!-- Mobile Development -->
+        <div
+          class="relative flex flex-col items-center border-promactBorderLightGray bg-promactLightGray border-2 rounded-3xl  overflow-hidden">
+          <img src="images/Mobile-Development.webp" class="w-[74px] h-20 m-10 mb-5" />
+          <h3 class="font-semibold text-promactGray text-2xl mb-5">Mobile Development</h3>
+          <p class="text-promactGray text-xl mx-10 text-center mb-14">Launch your business in the mobile app ecosystem
+            and quickly adapt to changing market demands. Learn how our mobile app development services can help you
+            grow
+            in every phase</p>
+          <div class="absolute bottom-0 h-3 w-10/12 mx-auto bg-promactServiceOrange rounded-t-xl"></div>
+        </div>
+
+        <!-- Web Development -->
+        <div
+          class="relative flex flex-col items-center border-promactBorderLightGray bg-promactLightGray border-2 rounded-3xl  overflow-hidden">
+          <img src="images/Website-Development.webp" class="w-[74px] h-20 m-10 mb-5" />
+          <h3 class="font-semibold text-promactGray text-2xl mb-5">Web Development</h3>
+          <p class="text-promactGray text-xl mx-10 text-center mb-14">Choose from from our high-end and exquisitely
+            robust website development services that are custom tailored to your specific business needs
+          </p>
+          <div class="absolute bottom-0 h-3 w-10/12 mx-auto bg-promactServiceGreen rounded-t-xl"></div>
+        </div>
+
+        <!-- DevOps -->
+        <div
+          class="relative flex flex-col items-center border-promactBorderLightGray bg-promactLightGray border-2 rounded-3xl  overflow-hidden">
+          <img src="images/DevOps.webp" class="w-[74px] h-20 m-10 mb-5" />
+          <h3 class="font-semibold text-promactGray text-2xl mb-5">DevOps</h3>
+          <p class="text-promactGray text-xl mx-10 text-center mb-14">We enable uninterrupted service using DevOps which
+            includes agile planning, continuous integration, rapid delivery and monitoring of applications
+          </p>
+          <div class="absolute bottom-0 h-3 w-10/12 mx-auto bg-promactServiceDarkBlue rounded-t-xl"></div>
+        </div>
+
+        <!-- Blockchain Technology -->
+        <div
+          class="relative flex flex-col items-center border-promactBorderLightGray bg-promactLightGray border-2 rounded-3xl  overflow-hidden">
+          <img src="images/Blockchain-Technology.webp" class="w-[74px] h-20 m-10 mb-5" />
+          <h3 class="font-semibold text-promactGray text-2xl mb-5">Blockchain Technology</h3>
+          <p class="text-promactGray text-xl mx-10 text-center mb-14">With demonstrable technical expertise in
+            Blockchain technology, we provide enterprise-class solutions to explore, develop and implement Blockchain
+            services
+          </p>
+          <div class="absolute bottom-0 h-3 w-10/12 mx-auto bg-promactServiceLightBlue rounded-t-xl"></div>
+        </div>
+
+        <!-- Artificial Technology -->
+        <div
+          class="relative flex flex-col items-center border-promactBorderLightGray bg-promactLightGray border-2 rounded-3xl  overflow-hidden">
+          <img src="images/AI-ML.webp" class="w-[74px] h-20 m-10 mb-5" />
+          <h3 class="font-semibold text-promactGray text-2xl mb-5">Artificial Intelligence</h3>
+          <p class="text-promactGray text-xl mx-10 text-center mb-14">Accelerate your business infrastructure with Big
+            Data. We offer a complete AI/ML solutions to help you leverage algorithms, and boost productivity and reduce
+            cost
+          </p>
+          <div class="absolute bottom-0 h-3 w-10/12 mx-auto bg-promactServicePink rounded-t-xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Info -->
+  <section id="companyInfo" class="bg-promactCompanyInfo px-28 py-14">
+    <!-- <div class="flex flex-col flex-wrap items-center justify-center p-10 md:flex-row"> -->
+    <div class="container max-w-6xl mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4  ">
+      <!-- Experience -->
+      <div class="flex flex-col items-center justify-center text-promactAchievementColor text-center">
+        <div class="relative border-black bg-achievement bg-no-repeat bg-auto w-60 h-44">
+          <p class="absolute text-7xl font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            18
+          </p>
+        </div>
+        <p class="uppercase text-xl leading-7 font-bold">
+          Years<br /> Experience
+        </p>
+        <p class="uppercase">
+          since 2003
+        </p>
+      </div>
+
+      <!-- Employees -->
+      <div class="flex flex-col items-center justify-center text-promactAchievementColor text-center">
+        <div class="relative border-black bg-achievement bg-no-repeat bg-auto w-60 h-44">
+          <div
+            class="flex items-center justify-center absolute font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <p class="text-7xl ">
+              80+
+            </p>
+          </div>
+        </div>
+        <p class="uppercase text-xl leading-7 font-bold">
+          Full-Time<br /> Employees
+        </p>
+        <p class="uppercase">
+          Strength
+        </p>
+      </div>
+
+      <!-- Employees Retention -->
+      <div class="flex flex-col items-center justify-center text-promactAchievementColor text-center">
+        <div class="relative border-black bg-achievement bg-no-repeat bg-auto w-60 h-44">
+          <p
+            class="absolute text-promactAchievementColor text-7xl font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            88%
+          </p>
+        </div>
+        <p class="uppercase text-xl leading-7 font-bold">
+          Employees<br /> Retention
+        </p>
+        <p class="uppercase">
+          in Promact
+        </p>
+      </div>
+
+      <!-- Gender Ratio -->
+      <div class="flex flex-col items-center justify-center text-promactAchievementColor text-center">
+        <div class="relative border-black bg-achievement bg-no-repeat bg-auto w-60 h-44">
+          <p
+            class="absolute text-promactAchievementColor text-7xl font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            47:54
+          </p>
+        </div>
+        <p class="uppercase text-xl leading-7 font-bold">
+          Gender<br /> Ratio
+        </p>
+        <p class="uppercase">
+          in Promact
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nascom -->
+  <section id="nascom" class="border-b-2 border-promactAchievementColor">
+    <div class="container max-w-5xl mx-auto flex flex-col items-center justify-center p-14 md:flex-row lg:px-0">
+      <div class="text-promactAchievementColor font-semibold text-2xl leading-9 md:w-1/2">
+        We are proud to be associated with the NASSCOM & GESIA.
+      </div>
+      <div class="flex items-center justify-between min-w-full md:justify-end md:min-w-0 md:w-1/2 ">
+        <div class="mr-0 md:mr-8">
+          <img src="images/Nasscom.webp" alt="Nasscom" />
+        </div>
+        <img src="images/gesia-logo.webp" alt="Gesia" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section id="Industries">
+    <div class="container max-w-6xl mx-auto py-28 -pl-40">
+      <h3 class="text-3xl text-promactGray font-semibold text-center mb-10">
+        Industries We Serve
+      </h3>
+      <!-- Accordian -->
+      <div class="max-w-2xl m-8 mx-auto overflow-hidden lg:hidden">
+        <!-- Accordian -->
+        <div class="ouline-none group" tabindex="1">
+          <!-- Tab Flex Container -->
+          <div
+            class="flex items-center justify-between py-3 px-5 bg-gray-200 text-black text-xl transition-all cursor-pointer group group-focus:text-white group-focus:bg-promactAccordian group-focus:border-b group-focus:border-white">
+            <!-- Tab Title -->
+            <div>
+              Social Networking
+            </div>
+            <!-- Arrow -->
+            <div class="group-focus:-rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Tab Inner Content -->
+          <div class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease">
+            <div class="py-10 pl-16 pr-24 text-justify text-white bg-promactAccordian">
+              <h4 class="text-xl leading-9 mb-4 font-semibold">Social Networking</h4>
+              <p class="text-xl">
+                We help businesses to increase their visibility with online marketing, digital media solutions and SEO
+                strategies
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordian -->
+        <div class="ouline-none group" tabindex="2">
+          <!-- Tab Flex Container -->
+          <div
+            class="flex items-center justify-between py-3 px-5 bg-gray-200 text-black text-xl transition-all cursor-pointer group group-focus:text-white group-focus:bg-promactAccordian group-focus:border-b group-focus:border-white">
+            <!-- Tab Title -->
+            <div>
+              Education/ELearning
+            </div>
+            <!-- Arrow -->
+            <div class="group-focus:-rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Tab Inner Content -->
+          <div class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease">
+            <div class="py-10 pl-16 pr-24 text-justify text-white bg-promactAccordian">
+              <h4 class="text-xl leading-9 mb-4 font-semibold">Education/ELearning</h4>
+              <p class="text-xl">
+                A full spectrum of Learning Management Systems (LMS) and customized eLearning application development
+                services
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Accordian -->
+        <div class="ouline-none group" tabindex="2">
+          <!-- Tab Flex Container -->
+          <div
+            class="flex items-center justify-between py-3 px-5 bg-gray-200 text-black text-xl transition-all cursor-pointer group group-focus:text-white group-focus:bg-promactAccordian group-focus:border-b group-focus:border-white">
+            <!-- Tab Title -->
+            <div>
+              Retail
+            </div>
+            <!-- Arrow -->
+            <div class="group-focus:-rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Tab Inner Content -->
+          <div class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease">
+            <div class="py-10 pl-16 pr-24 text-justify text-white bg-promactAccordian">
+              <h4 class="text-xl leading-9 mb-4 font-semibold">Retail</h4>
+              <p class="text-xl">
+                We provide solutions including designing, developing, supporting, hosting and maintaining E-commerce
+                platforms
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Accordian -->
+        <div class="ouline-none group" tabindex="2">
+          <!-- Tab Flex Container -->
+          <div
+            class="flex items-center justify-between py-3 px-5 bg-gray-200 text-black text-xl transition-all cursor-pointer group group-focus:text-white group-focus:bg-promactAccordian group-focus:border-b group-focus:border-white">
+            <!-- Tab Title -->
+            <div>
+              Finance
+            </div>
+            <!-- Arrow -->
+            <div class="group-focus:-rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Tab Inner Content -->
+          <div class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease">
+            <div class="py-10 pl-16 pr-24 text-justify text-white bg-promactAccordian">
+              <h4 class="text-xl leading-9 mb-4 font-semibold">Finance</h4>
+              <p class="text-xl">
+                Using innovative technological solutions, we help finance companies provide faster and more efficient
+                services to their customers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Accordian -->
+        <div class="ouline-none group" tabindex="2">
+          <!-- Tab Flex Container -->
+          <div
+            class="flex items-center justify-between py-3 px-5 bg-gray-200 text-black text-xl transition-all cursor-pointer group group-focus:text-white group-focus:bg-promactAccordian group-focus:border-b group-focus:border-white">
+            <!-- Tab Title -->
+            <div>
+              Logistic & Inspection
+            </div>
+            <!-- Arrow -->
+            <div class="group-focus:-rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Tab Inner Content -->
+          <div class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease">
+            <div class="py-10 pl-16 pr-24 text-justify text-white bg-promactAccordian">
+              <h4 class="text-xl leading-9 mb-4 font-semibold">Logistic & Inspection</h4>
+              <p class="text-xl">
+                We provide our customers with software systems as well as solutions for real-time online access and
+                track and trace, which integrate with their existing systems.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Accordian -->
+        <div class="ouline-none group" tabindex="2">
+          <!-- Tab Flex Container -->
+          <div
+            class="flex items-center justify-between py-3 px-5 bg-gray-200 text-black text-xl transition-all cursor-pointer group group-focus:text-white group-focus:bg-promactAccordian group-focus:border-b group-focus:border-white">
+            <!-- Tab Title -->
+            <div>
+              And That's Not All!
+            </div>
+            <!-- Arrow -->
+            <div class="group-focus:-rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Tab Inner Content -->
+          <div class="overflow-hidden transition duration-500 group-focus:max-h-screen max-h-0 ease">
+            <div class="py-10 pl-16 pr-24 text-justify text-white bg-promactAccordian">
+              <h4 class="text-xl leading-9 mb-4 font-semibold">And That's Not All!</h4>
+              <p class="text-xl">
+                Whether you are looking for a startup or enterprise level solutions, our experts will provide custom
+                advice to meet specific product requirements
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Accordian like structure -->
+      <div class="hidden relative lg:flex lg:justify-center xl:justify-start">
+        <!-- <ul class="text-right flex flex-col">
+            <li class="py-3 px-5 border-2 border-r-0 rounded-l-full ">Social Networking</li>
+            <li class="py-3 px-5 border-2 border-r-0 rounded-l-full ">Education/ELearning</li>
+            <li class="py-3 px-5 border-2 border-r-0 rounded-l-full ">Retail</li>
+            <li class="py-3 px-5 border-2 border-r-0 rounded-l-full ">Finance</li>
+            <li class="py-3 px-5 border-2 border-r-0 rounded-l-full ">Logistic & Inspection</li>
+            <li class="py-3 px-5 border-2 border-r-0 rounded-l-full ">And That's Not All!</li>
+          </ul> -->
+        <div class="flex flex-col items-end justify-center text-xl">
+          <p class="py-3 px-5 border-2 border-r-0 rounded-l-full max-w-max industry-tab bg-promactAccordian text-white cursor-pointer"
+            data-target="industry-1">
+            Social Networking
+          </p>
+          <p class="py-3 px-5 border-2 border-r-0 rounded-l-full max-w-max industry-tab cursor-pointer"
+            data-target="industry-2">
+            Education/ELearning
+          </p>
+          <p class="py-3 px-5 border-2 border-r-0 rounded-l-full max-w-max industry-tab cursor-pointer"
+            data-target="industry-3">
+            Retail
+          </p>
+          <p class="py-3 px-5 border-2 border-r-0 rounded-l-full max-w-max industry-tab cursor-pointer"
+            data-target="industry-4">
+            Finance
+          </p>
+          <p class="py-3 px-5 border-2 border-r-0 rounded-l-full max-w-max industry-tab cursor-pointer"
+            data-target="industry-5">
+            Logistic & Inspection
+          </p>
+          <p class="py-3 px-5 border-2 border-r-0 rounded-l-full max-w-max industry-tab cursor-pointer"
+            data-target="industry-6">
+            And That's Not All!
+          </p>
+        </div>
+        <div id="industry-panels" class="relative w-[600px] min-h-[545px] bg-promactAccordian text-white rounded-r-3xl">
+          <div
+            class="absolute bottom-0 left-0 right-0 py-10 pl-16 pr-24 bg-promactAccordian overflow-hidden w-full h-full transition-all ease-in-out duration-500 industry-panel rounded-r-3xl industry-1">
+            <div class="mt-9 mb-5 text-2xl leading-8">
+              Social Networking
+            </div>
+            <p class="text-xl leading-7">
+              We help businesses to increase their visibility with online marketing, digital media solutions and SEO
+              strategies
+            </p>
+          </div>
+
+          <div
+            class="absolute bottom-0 left-0 right-0 py-10 pl-16 pr-24 bg-promactAccordian overflow-hidden w-full h-0 transition-all ease-in-out duration-500 industry-panel rounded-r-3xl industry-2">
+            <div class="mt-9 mb-5 text-2xl leading-8">
+              Education/eLearning
+            </div>
+            <p class="text-xl leading-7">
+              A full spectrum of Learning Management Systems (LMS) and customized eLearning application development
+              services
+            </p>
+          </div>
+
+          <div
+            class="absolute bottom-0 left-0 right-0 py-10 pl-16 pr-24 bg-promactAccordian overflow-hidden w-full h-0 transition-all ease-in-out duration-500 industry-panel rounded-r-3xl industry-3">
+            <div class="mt-9 mb-5 text-2xl leading-8">
+              Retail
+            </div>
+            <p class="text-xl leading-7">
+              We provide solutions including designing, developing, supporting, hosting and maintaining E-commerce
+              platforms
+            </p>
+          </div>
+
+          <div
+            class="absolute bottom-0 left-0 right-0 py-10 pl-16 pr-24 bg-promactAccordian overflow-hidden w-full h-0 transition-all ease-in-out duration-500 industry-panel rounded-r-3xl industry-4">
+            <div class="mt-9 mb-5 text-2xl leading-8">
+              Finance
+            </div>
+            <p class="text-xl leading-7">
+              Using innovative technological solutions, we help finance companies provide faster and more efficient
+              services to their customers.
+            </p>
+          </div>
+
+          <div
+            class="absolute bottom-0 left-0 right-0 py-10 pl-16 pr-24 bg-promactAccordian overflow-hidden w-full h-0 transition-all ease-in-out duration-500 industry-panel rounded-r-3xl industry-5">
+            <div class="mt-9 mb-5 text-2xl leading-8">
+              Logistic & Inspection
+            </div>
+            <p class="text-xl leading-7">
+              We provide our customers with software systems as well as solutions for real-time online access and
+              track and trace, which integrate with their existing systems.
+            </p>
+          </div>
+
+          <div
+            class="absolute bottom-0 left-0 right-0 py-10 pl-16 pr-24 bg-promactAccordian overflow-hidden w-full h-0 transition-all ease-in-out duration-500 industry-panel rounded-r-3xl industry-6">
+            <div class="mt-9 mb-5 text-2xl leading-8">
+              And That's Not All!
+            </div>
+            <p class="text-xl leading-7">
+              Whether you are looking for a startup or enterprise level solutions, our experts will provide custom
+              advice to meet specific product requirements
+            </p>
+          </div>
+        </div>
+
+        <!-- Round Building -->
+        <div class="hidden absolute -right-14 w-[500px] h-[500px] top-10 xl:block">
+          <img src="images/360-degree-image2.webp" class="animate-spin-slow" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="bg-promactCompanyInfo">
+    <div class="container mx-auto px-11 pt-14 pb-32">
+      <h3 class="text-3xl text-center font-semibold text-promactGray leading-10 mt-9 mb-16">
+        Our Achievements
+      </h3>
+      <div class="grid grid-cols-1 gap-10 mx-10 md:mx-16 md:grid-cols-2 lg:mx-40 lg:grid-cols-4">
+        <div class="flex flex-col items-center justify-center">
+          <div class="border-2 p-10 rounded-full">
+            <img src="images/achievement-experience.webp" />
+          </div>
+          <p class="text-2xl text-promactGray text-center mt-8 font-semibold">
+            16+ Years of experience
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center justify-center">
+          <div class="border-2 p-10 rounded-full">
+            <img src="images/achievement-software.webp" />
+          </div>
+          <p class="text-2xl text-promactGray text-center mt-8 font-semibold">
+            700+ Software delivered to clients
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center justify-center">
+          <div class="border-2 p-10 rounded-full">
+            <img src="images/achievement-clients.webp" />
+          </div>
+          <p class="text-2xl text-promactGray text-center mt-8 font-semibold">
+            500+ Clients worldwide
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center justify-center">
+          <div class="border-2 px-12 py-10 rounded-full">
+            <img src="images/achievement-oylmpic.webp" />
+          </div>
+          <p class="text-2xl text-promactGray text-center mt-8 font-semibold">
+            50+ Games In Promact Olympics
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footprint -->
+  <section id="footprint">
+    <div class="container mx-auto px-11 pt-14 pb-32">
+      <h3 class="text-3xl text-center font-semibold text-promactGray leading-10 mt-9 mb-16">Our Global Footprint</h3>
+      <div class="mx-auto">
+        <img src="images/Promact-map-1-1.webp" class="mx-auto" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Client's Experience -->
+  <section id="client-experience" class="bg-promactCompanyInfo border-2">
+    <!-- pt-12 pb-60 -->
+    <div class="container mx-auto">
+      <!-- mb-24 -->
+      <h3 class="text-3xl text-center font-semibold text-promactGray leading-10 mt-9 mb-24">Client's Experiences</h3>
+
+      <!-- Testimonials Hero -->
+      <!-- mt-36 mb-48 -->
+      <div class="relative mx-auto h-[764px] sm:h-[500px] md:h-[430px] lg:h-[400px]">
+        <!-- Container -->
+        <div
+          class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] sm:w-[500px] md:w-[650px] lg:w-[800px]">
+          <!-- Indicator -->
+          <div class="absolute left-1/2 -translate-x-1/2 -bottom-12">
+            <span
+              class="inline-block h-1 w-14 m-1 rounded-2xl bg-promactGray cursor-pointer test-btn transition-all duration-500"></span>
+            <span
+              class="inline-block h-1 w-10 m-1 rounded-2xl bg-gray-400 cursor-pointer test-btn transition-all duration-500"></span>
+            <span
+              class="inline-block h-1 w-10 m-1 rounded-2xl bg-gray-400 cursor-pointer test-btn transition-all duration-500"></span>
+          </div>
+          <!-- Testimonials -->
+          <div class="w-full h-full overflow-hidden">
+            <!-- Slide row -->
+            <div class="flex w-[720px] sm:w-[1500px] md:w-[1950px] lg:w-[2400px] transition-all duration-500"
+              id="test-row">
+              <!-- Slide col -->
+              <div class="relative flex flex-col py-12 w-[240px] sm:w-[500px] md:w-[650px] lg:w-[800px]">
+                <p class="text-2xl text-center text-promactTestimonial">Promact is a one-stop solution for our technical
+                  needs for the past
+                  eight years. We
+                  are highly
+                  impressed by their DevOps skills and the implementation of scalable cloud architecture in our
+                  applications. Their deft knowledge of the new technologies and efforts in scaling our projects are
+                  commendable.</p>
+                <p class="text-2xl text-center font-semibold text-promactGray mt-7">Pat McMurich</p>
+                <p class="text-lg text-center text-gray-400">Gametime</p>
+              </div>
+
+              <!-- Slide col -->
+              <div class="relative flex flex-col py-12 w-[240px] sm:w-[500px] md:w-[650px] lg:w-[800px]">
+                <p class="text-2xl text-center text-promactTestimonial">Our experience with Promact has been first
+                  class. We've worked with a number of developers in the
+                  past, and Promact has been in a class by itself. We particularly appreciate their responsiveness and
+                  ability to deeply understand our product requirements. </p>
+                <p class="text-2xl text-center font-semibold text-promactGray">Dan Doran</p>
+                <p class="text-lg text-center text-gray-400">Quantive Business Valuations</p>
+              </div>
+
+              <!-- Slide col -->
+              <div class="relative flex flex-col py-12 w-[240px] sm:w-[500px] md:w-[650px] lg:w-[800px]">
+                <p class="text-2xl text-center text-promactTestimonial">Promact provided stability, advancement, and
+                  scalability to our ambitious startup project involving
+                  AR, MapReduce framework for Big Data, Blockchain, ML & AI. They solved issues impacting our business,
+                  handled application releases, developed IOS & Android Apps, website, and admin portal, and set up
+                  international payment gateways. </p>
+                <p class="text-2xl text-center font-semibold text-promactGray">Nii Moe Addo</p>
+                <p class="text-lg text-center text-gray-400">Teetra</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Offices -->
+  <section id="our-offices">
+    <div class="container mx-auto px-11 pt-14 pb-32 max-w-6xl">
+      <h3 class="text-3xl text-center font-semibold text-promactGray leading-10 mt-9 mb-16">Our Offices</h3>
+      <div class="flex flex-col justify-center items-center mx-auto p-3 border-2 rounded-2xl sm:flex-row">
+        <img src="images/statue-of-unity.webp" class="m-8" />
+        <div class="">
+          <h4 class="text-2xl font-semibold text-promactGray my-8 mx-0">India<br />+91-932-760-1914</h4>
+          <h4 class="text-xl text-gray-500 my-5 mx-0"><span class="font-bold">Vadodara: </span>B-301, Monalisa Business
+            Center, Manjalpur, Vadodara,
+            Gujarat, India - 390011</h4>
+          <h4 class="text-xl text-gray-500 my-5 mx-0"><span class="font-bold">Pune: </span>Sky Loft, Creaticity Mall,
+            Off, Airport
+            Rd, opposite Golf Course, Shastrinagar, Yerawada, Pune, Maharashtra, India - 411006</h4>
+          <h4 class="text-xl text-gray-500 my-5 mx-0"><span class="font-bold">USA: </span>4201 Cypress Creek Pkwy, Ste
+            540 # 1188,
+            Houston, TX 77068</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get in touch -->
+  <section id="get-in-touch">
+    <div class="container mx-auto max-w-5xl">
+      <div class="bg-promactYellow flex flex-col justify-evenly items-center p-8 rounded-t-3xl lg:flex-row">
+        <p class="mx-10 mb-4 text-3xl text-promactGray font-semibold lg:my-0">Looking for all-in-one software
+          development services?
+        </p>
+        <a href="#"
+          class="uppercase text-xs font-semibold bg-white rounded-3xl px-6 py-2 border-2 duration-500 hover:border-white hover:bg-transparent">Get&nbsp;In&nbsp;Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-promactGray">
+    <div class="container mx-auto max-w-5xl">
+      <!-- Mobile Footer-->
+      <div class="text-gray-400 footer-tabs lg:hidden">
+
+        <!-- Services -->
+        <div class="relative transition-all duration-1000" parent-of="footer-services">
+          <div class="text-2xl font-bold py-4 pl-5 pr-11 footer-tab cursor-pointer flex justify-between items-center"
+            data-target="footer-services">
+            Services
+            <div class="transition duration-500 ease">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="text-lg pl-5 transition-all ease-in-out duration-500 h-0 overflow-hidden  footer-panel footer-services">
+            <p>Product Engineering</p>
+            <p>Mobile Development</p>
+            <p>Web Development</p>
+            <p>DevOps</p>
+            <p>Blockchain Technologies</p>
+            <p>Artificial Intelligence</p>
+          </div>
+        </div>
+
+        <!-- Products -->
+        <h3 class="text-2xl font-bold py-4 pl-5 pr-11 footer-tab cursor-pointer flex justify-between items-center"
+          data-target="footer-products">
+          Products
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+            <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
+          </svg>
+        </h3>
+        <div
+          class="text-lg pl-5 h-0 overflow-hidden transition-all ease-in-out duration-500 footer-panel footer-products">
+          <p>Questy</p>
+          <p>Probot</p>
+        </div>
+
+        <!-- Company -->
+        <h3 class="text-2xl font-bold py-4 pl-5 pr-11 footer-tab cursor-pointer flex justify-between items-center"
+          data-target="footer-company">
+          Company
+          <div class="transition duration-500 ease">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+              <path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8" />
+            </svg>
+          </div>
+        </h3>
+        <div
+          class="text-lg pl-5 h-0 overflow-hidden transition-all ease-in-out duration-500 footer-panel footer-company">
+          <p>About</p>
+          <p>Careers</p>
+          <p>Life@Promact</p>
+          <p>Blog</p>
+        </div>
+
+        <!-- Contact -->
+        <h3 class="text-2xl font-bold py-4 pl-5 pr-11 footer-tab cursor-pointer flex justify-between items-center">
+          Contact Us
+        </h3>
+        <div class="text-lg py-4 pl-5 pr-11">
+          <p>India <br /> +91-932-760-1914</p>
+          <p class="mt-3">B-301, Monalisa Business Center, Manjalpur, Vadodara, Gujarat, India - 390011</p>
+          <p class="mt-3">Sky Loft, Creaticity Mall, Off, Airport Rd, opposite Golf Course, Shastrinagar, Yerawada,
+            Pune,
+            Maharashtra, India - 411006</p>
+          <p class="mt-3">4201 Cypress Creek Pkwy, Ste 540 # 1188, Houston, TX 77068
+          </p>
+          <a class="inline-block mt-3 text-promactYellow">info@promactinfo.com</a>
+        </div>
+
+        <!-- Social Links -->
+        <div>
+
+        </div>
+
+        <!-- Bottom Dark Div -->
+        <div class="bg-promactCopyright py-7 text-center text-sm">
+          Copyright &copy;2020 Promact Infotech Pvt. Ltd. All Rights Reserved.
+        </div>
+      </div>
+
+      <!-- Desktop Footer -->
+      <div class="hidden lg:block">
+        <div class="grid grid-cols-4 gap-3 py-2">
+          <!-- Services -->
+          <div>
+            <h3 class="text-gray-400 text-xl font-semibold leading-6 mt-9 mb-5">Services</h3>
+            <div class="text-gray-400 leading-9">
+              <p class="hover:text-promactYellow">Product Engineering</p>
+              <p class="hover:text-promactYellow">Mobile Development</p>
+              <p class="hover:text-promactYellow">Web Development</p>
+              <p class="hover:text-promactYellow">Blockchain Technologies</p>
+              <p class="hover:text-promactYellow">Artificial Intelligence</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-gray-400 text-xl font-semibold leading-6 mt-9 mb-5">Products</h3>
+            <div class="text-gray-400 leading-9">
+              <p class="hover:text-promactYellow">Questy</p>
+              <p class="hover:text-promactYellow">Probot</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-gray-400 text-xl font-semibold leading-6 mt-9 mb-5">Company</h3>
+            <div class="text-gray-400 leading-9">
+              <p class="hover:text-promactYellow">About</p>
+              <p class="hover:text-promactYellow">Careers@Promact</p>
+              <p class="hover:text-promactYellow">Life@Promact</p>
+              <p class="hover:text-promactYellow">Blog</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-gray-400 text-xl font-semibold leading-4 mt-9 mb-5">Contact Us</h3>
+            <div class="text-gray-400">
+              <p>India<br />
+                +91-932-760-1914</p>
+              <br />
+              <p>B-301, Monalisa Business Center, Manjalpur, Vadodara, Gujarat, India - 390011</p><br />
+              <p>Sky Loft, Creaticity Mall, Off, Airport Rd, opposite Golf Course, Shastrinagar, Yerawada, Pune,
+                Maharashtra, India - 411006
+              </p><br />
+              <p>4201 Cypress Creek Pkwy, Ste 540 # 1188, Houston, TX 77068
+              </p><br />
+              <p class="text-promactYellow">info@promactinfo.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden bg-promactCopyright text-gray-400 py-7 text-center text-sm lg:block">
+      Copyright &copy;2020 Promact Infotech Pvt. Ltd. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+
+</html>

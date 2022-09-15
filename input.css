@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  /*background: #ffffff;*/
+  background: #f9c213;
+  transform: rotate(0);
+  transition: all 0.5s;
+  border: 1px solid #0a3164;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+  /* background: #000; */
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+  position: fixed;
+  top: 25px;
+  right: 25px;
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  /*background-color: #000000;*/
+  background-color: #f9c213;
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  /*background-color: #000000;*/
+  background-color: #f9c213;
+}
+
+.tick-style-2 {
+  list-style-image: url("../images/tick@2x.webp");
+}
+
+.tick-style-gray {
+  list-style-image: url("../images/tick.webp");
+}
+
+.slide {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0.1% at 0 51%);
+}
+
+.slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 1s;
+  transition-property: clip-path;
+}
+
+.slide img {
+  z-index: 1;
+  width: 100%;
+}
+
+.slider-nav-btn.active {
+  @apply bg-promactYellow;
+}
